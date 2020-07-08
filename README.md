@@ -1,4 +1,4 @@
-# tokenlandia-dapp
+# videolatino-admin-dapp
 
 ## Project setup
 ```

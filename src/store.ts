@@ -247,8 +247,8 @@ export default new Vuex.Store({
       }
     },
 
-    attributesForTokenId({state}, tokenId) {
-      return state.tokenLandiaContract.methods.attributes(tokenId).call();
+    attributesForTokenId({state}, {selectedToken, tokenId}) {
+      return getTokenContract(selectedToken, state).methods.attributes(tokenId).call();
     },
 
     mintToken({state}, {tokenId, recipient, productCode, ipfsHash, onceTxHash, onceReceipt, selectedToken}) {
@@ -282,10 +282,10 @@ export default new Vuex.Store({
       });
     },
 
-    transferToken({state}, {recipient, tokenId}) {
+    transferToken({state}, {recipient, tokenId, selectedToken}) {
       return new Promise((resolve, reject) => {
         const from = state.account;
-        state.tokenLandiaContract.methods.transferFrom(from, recipient, tokenId)
+        getTokenContract(selectedToken, state).methods.transferFrom(from, recipient, tokenId)
           .send({from})
           .once('transactionHash', (hash: string) => {
             // @ts-ignore
@@ -322,9 +322,9 @@ export default new Vuex.Store({
       }
     },
 
-    tokensOfOwner({state, commit, dispatch}, ethAddress) {
+    tokensOfOwner({state, commit, dispatch}, {ethAddress,selectedToken}) {
       try {
-        return state.tokenLandiaContract.methods.tokensOfOwner(ethAddress).call();
+        return getTokenContract(selectedToken, state).methods.tokensOfOwner(ethAddress).call();
       } catch (e) {
         return Promise.resolve(false);
       }

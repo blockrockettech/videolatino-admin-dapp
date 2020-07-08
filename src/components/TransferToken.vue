@@ -67,6 +67,7 @@
             this.txHash = await this.$store.dispatch('transferToken', {
                 recipient: this.recipient,
                 tokenId: this.selectedToken,
+                selectedToken: 'Video Latino'
             });
             this.transfering = true;
         }

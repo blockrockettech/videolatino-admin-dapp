@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: { name: 'mint-assets' }
+      redirect: { name: 'mint-video-latino' }
     },
     {
       path: '/manage/verify',
@@ -19,14 +19,6 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Verify.vue'),
-    },
-    {
-      path: '/manage/update',
-      name: 'manage-update',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Update.vue'),
     },
     {
       path: '/user-access',
@@ -43,19 +35,6 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Account.vue'),
-    },
-    {
-      path: '/mint/assets',
-      name: 'mint-assets',
-      component: Home,
-    },
-    {
-      path: '/mint/real-estate',
-      name: 'mint-real-estate',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/MintRealEstate.vue'),
     },
     {
       path: '/mint/video-latino',

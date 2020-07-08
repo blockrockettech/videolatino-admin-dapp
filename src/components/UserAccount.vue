@@ -50,9 +50,12 @@
             this.tokenIds = tokenIds;
             this.tokenSummaryToIdMapArray = await Promise.all(
                 tokenIds.map(async (tokenId: string) => {
-                    const attributes = await this.$store.dispatch('attributesForTokenId', tokenId);
+                    const attributes = await this.$store.dispatch('attributesForTokenId', {
+                      tokenId,
+                      selectedToken: 'Video Latino'
+                    });
                     return {
-                        text: `Token ID: #${tokenId} - Product Code: ${attributes._productId}`,
+                        text: `Token ID: #${tokenId} - Product Code: ${attributes._productCode}`,
                         value: tokenId, // n.b: value is used by b-form-select
                         tokenId,
                         ...attributes
@@ -63,7 +66,10 @@
 
         mounted() {
             if (this.account) {
-                this.$store.dispatch('tokensOfOwner', this.account)
+                this.$store.dispatch('tokensOfOwner', {
+                  ethAddress: this.account,
+                  selectedToken: 'Video Latino'
+                })
                     .then(data => this.fetchTokenInfoFromTokenIDs(data));
             }
         }

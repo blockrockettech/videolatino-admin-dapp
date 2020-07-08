@@ -9,7 +9,7 @@
       <!-- Sidebar  -->
       <nav id="sidebar" v-bind:class="{'s-active': collapsed}">
         <div class="sidebar-header heading">
-          <h3>TokenLandia Admin</h3>
+          <h3>Videolatino Admin</h3>
         </div>
 
         <ul class="list-unstyled components heading menu-text">
@@ -20,14 +20,8 @@
               </font-awesome-icon>
             </a>
             <ul class="collapse list-unstyled heading" id="homeSubmenu" v-bind:class="{'show': expanded.minting}">
-              <li v-bind:class="{ 'active': this.$router.currentRoute.path === '/mint/assets' }">
-                <router-link to="/">General Products</router-link>
-              </li>
               <li v-bind:class="{ 'active': this.$router.currentRoute.path === '/mint/video-latino' }">
                 <router-link to="/mint/video-latino">Video Latino</router-link>
-              </li>
-              <li v-bind:class="{ 'active': this.$router.currentRoute.path === '/mint/real-estate' }">
-                <router-link to="/mint/real-estate">Real Estate</router-link>
               </li>
             </ul>
           </li>
@@ -40,9 +34,6 @@
             <ul class="collapse list-unstyled heading" id="tokenManagementSubmenu" v-bind:class="{'show': expanded.token_management}">
               <li v-bind:class="{ 'active': this.$router.currentRoute.path === '/manage/verify' }">
                 <router-link to="/manage/verify">Verify</router-link>
-              </li>
-              <li v-bind:class="{ 'active': this.$router.currentRoute.path === '/manage/update' }">
-                <router-link to="/manage/update">Update</router-link>
               </li>
             </ul>
           </li>

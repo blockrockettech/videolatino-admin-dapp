@@ -2,22 +2,6 @@
   <div class="txt">
     <h1 class="heading">NFT Verification</h1>
     <hr/>
-    <div class="row text-left my-1">
-      <div class="col">
-          <b-input-group prepend="Token" class="mb-2 mr-sm-2 mb-sm-0 fixed-width-input">
-            <select
-              id="tokenSelect"
-              name="tokenSelect"
-              class="mb-2 mb-sm-0 form-control"
-              @change="resetData"
-              v-model="selectedToken">
-              <option value="">Please select one</option>
-              <option v-for="token in tokenSelectionOptions" :value="token.text">{{token.text}}</option>
-            </select>
-          </b-input-group>
-        </div>
-
-    </div>
     <div v-if="selectedToken">
       <div class="row">
         <div class="col">
@@ -198,7 +182,7 @@
     etherscanTokenLink!: (tokenId: string, selectedToken: string) => string;
     openSeaTokenLink!: (tokenId: string, selectedToken: string) => string;
 
-    selectedToken: any = null;
+    selectedToken: any = 'Video Latino';
 
     get tokenSelectionOptions() {
       // @ts-ignore

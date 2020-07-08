@@ -2,27 +2,6 @@
   <div>
     <h1 class="heading">User Access Controls</h1>
     <hr/>
-    <div class="row text-left my-1">
-      <div class="col">
-        <h4>Select a token</h4>
-        <div class="row my-3">
-          <div class="col-2">
-            <label for="tokenSelect">Token</label>
-          </div>
-          <div class="col-4 form-group">
-            <select
-              id="tokenSelect"
-              name="tokenSelect"
-              class="form-control"
-              @change="resetData"
-              v-model="selectedToken">
-              <option value="">Please select one</option>
-              <option v-for="token in tokenSelectionOptions" :value="token.text">{{token.text}}</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
     <div v-if="selectedToken">
       <div class="row text-left my-1">
         <div class="col">
@@ -268,7 +247,7 @@
         account: any;
         allWhitelistedAddresses: string[] = [];
         allAdminWhitelistedAddresses: string[] = [];
-        selectedToken: any = null;
+        selectedToken: any = 'Video Latino';
 
         get tokenSelectionOptions() {
           // @ts-ignore
