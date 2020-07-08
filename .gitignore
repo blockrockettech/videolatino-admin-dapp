@@ -7,6 +7,7 @@ node_modules
 .firebase/hosting.ZGlzdA.cache
 
 # local env files
+.env
 .env.local
 .env.*.local
 
