@@ -250,8 +250,8 @@
   #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #F3B85C;
-    color: #fff;
+    background: #D9D9D9;
+    color: #000000;
     transition: all 0.3s;
   }
 
@@ -261,7 +261,8 @@
 
   #sidebar .sidebar-header {
     padding: 20px;
-    background: #DE683C;
+    background: #E94866;
+    color: #D9D9D9 !important;
   }
 
   #sidebar ul.components {
@@ -269,7 +270,7 @@
   }
 
   #sidebar ul p {
-    color: #fff;
+    color: #000000;
     padding: 10px;
   }
 
@@ -280,14 +281,14 @@
   }
 
   #sidebar ul li a:hover {
-    color: #F3B85C;
+    color: #000000;
     background: #fff;
   }
 
   #sidebar ul li.active > a,
   a[aria-expanded="true"] {
     color: #fff;
-    background: #DE683C;
+    background: #ED797E;
   }
 
   a[data-toggle="collapse"] {
@@ -308,14 +309,14 @@
   }
 
   a.download {
-    background: #fff;
-    color: #F3B85C;
+    background: #000000;
+    color: #D9D9D9;
   }
 
   a.article,
   a.article:hover {
-    background: #DE683C !important;
-    color: #fff !important;
+    background: #E94866 !important;
+    color: #000000 !important;
   }
 
   /* ---------------------------------------------------
