@@ -253,7 +253,7 @@
   #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #D9D9D9;
+    background: #CECECE;
     color: #000000;
     transition: all 0.3s;
   }
@@ -264,8 +264,8 @@
 
   #sidebar .sidebar-header {
     padding: 20px;
-    background: #E94866;
-    color: #D9D9D9 !important;
+    background: #FF1A5C;
+    color: #CECECE !important;
   }
 
   #sidebar ul.components {
@@ -313,12 +313,12 @@
 
   a.download {
     background: #000000;
-    color: #D9D9D9;
+    color: #CECECE;
   }
 
   a.article,
   a.article:hover {
-    background: #E94866 !important;
+    background: #FF1A5C !important;
     color: #000000 !important;
   }
 
