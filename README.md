@@ -32,3 +32,11 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## .env config
+
+```env
+VUE_APP_API_KEY=<key>
+VUE_APP_BASE_URL=<base-url>
+```
