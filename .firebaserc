@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "videolatino-admin"
+  },
+  "targets": {
+    "tokenlandia-admin": {
+      "hosting": {
+        "tokenlandia-admin": [
+          "videolatino-admin"
+        ]
+      }
+    }
+  }
+}
